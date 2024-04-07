@@ -1,0 +1,73 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header,
+.footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* 화면 너비가 768px 미만일 때 적용될 스타일 */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header,
+    .footer {
+        padding: 20px 0;
+    }
+}
+
+/* 화면 너비가 480px 미만일 때 적용될 스타일 */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .header,
+    .footer {
+        font-size: 18px;
+    }
+
+    .navbar a {
+        padding: 10px 15px;
+    }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiJvdXRwdXQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyog6riw67O4IOyKpO2DgOydvCAqL1xuYm9keSB7XG4gICAgZm9udC1mYW1pbHk6IEFyaWFsLCBzYW5zLXNlcmlmO1xuICAgIGxpbmUtaGVpZ2h0OiAxLjY7XG4gICAgcGFkZGluZzogMjBweDtcbiAgICBtYXJnaW46IDA7XG59XG5cbi5jb250YWluZXIge1xuICAgIHdpZHRoOiA4MCU7XG4gICAgbWFyZ2luOiAwIGF1dG87XG4gICAgcGFkZGluZzogMjBweDtcbn1cblxuLmhlYWRlcixcbi5mb290ZXIge1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBwYWRkaW5nOiAxMHB4IDA7XG59XG5cbi5uYXZiYXIge1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzMzMztcbn1cblxuLm5hdmJhciBhIHtcbiAgICBmbG9hdDogbGVmdDtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIHBhZGRpbmc6IDE0cHggMjBweDtcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG59XG5cbi8qIO2ZlOuptCDrhIjruYTqsIAgNzY4cHgg66+466eM7J28IOuVjCDsoIHsmqnrkKAg7Iqk7YOA7J28ICovXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgIC5jb250YWluZXIge1xuICAgICAgICB3aWR0aDogOTUlO1xuICAgIH1cblxuICAgIC5uYXZiYXIgYSB7XG4gICAgICAgIGZsb2F0OiBub25lO1xuICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgICAgdGV4dC1hbGlnbjogbGVmdDtcbiAgICB9XG5cbiAgICAuaGVhZGVyLFxuICAgIC5mb290ZXIge1xuICAgICAgICBwYWRkaW5nOiAyMHB4IDA7XG4gICAgfVxufVxuXG4vKiDtmZTrqbQg64SI67mE6rCAIDQ4MHB4IOuvuOunjOydvCDrlYwg7KCB7Jqp65CgIOyKpO2DgOydvCAqL1xuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNDgwcHgpIHtcbiAgICBib2R5IHtcbiAgICAgICAgcGFkZGluZzogMTBweDtcbiAgICB9XG5cbiAgICAuY29udGFpbmVyIHtcbiAgICAgICAgcGFkZGluZzogMTBweDtcbiAgICB9XG5cbiAgICAuaGVhZGVyLFxuICAgIC5mb290ZXIge1xuICAgICAgICBmb250LXNpemU6IDE4cHg7XG4gICAgfVxuXG4gICAgLm5hdmJhciBhIHtcbiAgICAgICAgcGFkZGluZzogMTBweCAxNXB4O1xuICAgIH1cbn1cbiJdfQ== */

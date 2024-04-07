@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.admin-container, .container {
+    max-width: auto;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #444;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #007bff;
+    color: white;
+}
+tr:hover {background-color: #f5f5f5;}
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="submit"], button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="submit"]:hover, button:hover {
+    background-color: #0056b3;
+}
+.admin-button {
+    background-color: #008CBA; /* Blue */
+}
+
+select {
+    width: 10%; /* 전체 너비를 차지하도록 설정 */
+    padding: 10px; /* 패딩을 추가하여 높이를 조정 */
+    margin-bottom: 10px; /* 다른 요소와의 간격을 조정 */
+    border: 1px solid #ccc; /* 테두리 스타일을 정의 */
+    border-radius: 4px; /* 테두리의 모서리를 둥글게 처리 */
+    font-size: 14px; /* 글자 크기를 정의 */
+    background-color: white; /* 배경색을 흰색으로 설정 */
+    cursor: pointer; /* 커서를 포인터로 설정하여 클릭 가능함을 나타냄 */
+}
+
+select:focus {
+    border-color: #007bff; /* 선택(포커스) 시 테두리 색상 변경 */
+    outline: none; /* 기본 아웃라인 제거 */
+}
+
+/* 반응형 디자인을 위한 설정 */
+@media (max-width: 600px) {
+    select {
+        width: 100%; /* 화면이 작을 때도 너비를 100%로 유지 */
+    }
+}
+
+
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+    }
+
+    input[type="text"], button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRhYmxlX3N0eWxlXzEuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6InRhYmxlX3N0eWxlLmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICAgIGZvbnQtZmFtaWx5OiAnU2Vnb2UgVUknLCBUYWhvbWEsIEdlbmV2YSwgVmVyZGFuYSwgc2Fucy1zZXJpZjtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjRmNGY0O1xuICAgIG1hcmdpbjogMDtcbiAgICBwYWRkaW5nOiAyMHB4O1xuICAgIGNvbG9yOiAjMzMzO1xufVxuXG4uYWRtaW4tY29udGFpbmVyLCAuY29udGFpbmVyIHtcbiAgICBtYXgtd2lkdGg6IGF1dG87XG4gICAgbWFyZ2luOiAyMHB4IGF1dG87XG4gICAgcGFkZGluZzogMjBweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICNkZGQ7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsMCwwLDAuMSk7XG59XG5cbmgxIHtcbiAgICBjb2xvcjogIzQ0NDtcbn1cbnRhYmxlIHtcbiAgICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG1hcmdpbi10b3A6IDIwcHg7XG59XG50aCwgdGQge1xuICAgIHRleHQtYWxpZ246IGxlZnQ7XG4gICAgcGFkZGluZzogOHB4O1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZGRkO1xufVxudGgge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMDdiZmY7XG4gICAgY29sb3I6IHdoaXRlO1xufVxudHI6aG92ZXIge2JhY2tncm91bmQtY29sb3I6ICNmNWY1ZjU7fVxuZm9ybSB7XG4gICAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuaW5wdXRbdHlwZT1cInRleHRcIl0ge1xuICAgIGZsZXg6IDE7XG4gICAgbWFyZ2luLXJpZ2h0OiAxMHB4O1xuICAgIHBhZGRpbmc6IDEwcHg7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgZm9udC1zaXplOiAxNHB4O1xufVxuXG5pbnB1dFt0eXBlPVwic3VibWl0XCJdLCBidXR0b24ge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMDdiZmY7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIHBhZGRpbmc6IDEwcHggMjBweDtcbiAgICBtYXJnaW46IDhweCAwO1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufVxuaW5wdXRbdHlwZT1cInN1Ym1pdFwiXTpob3ZlciwgYnV0dG9uOmhvdmVyIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDA1NmIzO1xufVxuLmFkbWluLWJ1dHRvbiB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzAwOENCQTsgLyogQmx1ZSAqL1xufVxuXG5zZWxlY3Qge1xuICAgIHdpZHRoOiAxMCU7IC8qIOyghOyytCDrhIjruYTrpbwg7LCo7KeA7ZWY64+E66GdIOyEpOyglSAqL1xuICAgIHBhZGRpbmc6IDEwcHg7IC8qIO2MqOuUqeydhCDstpTqsIDtlZjsl6wg64aS7J2066W8IOyhsOyglSAqL1xuICAgIG1hcmdpbi1ib3R0b206IDEwcHg7IC8qIOuLpOuluCDsmpTshozsmYDsnZgg6rCE6rKp7J2EIOyhsOyglSAqL1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICNjY2M7IC8qIO2FjOuRkOumrCDsiqTtg4DsnbzsnYQg7KCV7J2YICovXG4gICAgYm9yZGVyLXJhZGl1czogNHB4OyAvKiDthYzrkZDrpqzsnZgg66qo7ISc66as66W8IOuRpeq4gOqyjCDsspjrpqwgKi9cbiAgICBmb250LXNpemU6IDE0cHg7IC8qIOq4gOyekCDtgazquLDrpbwg7KCV7J2YICovXG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7IC8qIOuwsOqyveyDieydhCDtnbDsg4nsnLzroZwg7ISk7KCVICovXG4gICAgY3Vyc29yOiBwb2ludGVyOyAvKiDsu6TshJzrpbwg7Y+s7J247YSw66GcIOyEpOygle2VmOyXrCDtgbTrpq0g6rCA64ql7ZWo7J2EIOuCmO2DgOuDhCAqL1xufVxuXG5zZWxlY3Q6Zm9jdXMge1xuICAgIGJvcmRlci1jb2xvcjogIzAwN2JmZjsgLyog7ISg7YOdKO2PrOy7pOyKpCkg7IucIO2FjOuRkOumrCDsg4nsg4Eg67OA6rK9ICovXG4gICAgb3V0bGluZTogbm9uZTsgLyog6riw67O4IOyVhOybg+udvOyduCDsoJzqsbAgKi9cbn1cblxuLyog67CY7J2R7ZiVIOuUlOyekOyduOydhCDsnITtlZwg7ISk7KCVICovXG5AbWVkaWEgKG1heC13aWR0aDogNjAwcHgpIHtcbiAgICBzZWxlY3Qge1xuICAgICAgICB3aWR0aDogMTAwJTsgLyog7ZmU66m07J20IOyekeydhCDrlYzrj4Qg64SI67mE66W8IDEwMCXroZwg7Jyg7KeAICovXG4gICAgfVxufVxuXG5cbkBtZWRpYSAobWF4LXdpZHRoOiA2MDBweCkge1xuICAgIGZvcm0ge1xuICAgICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIH1cblxuICAgIGlucHV0W3R5cGU9XCJ0ZXh0XCJdLCBidXR0b24ge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAwO1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xuICAgIH1cbn0iXX0= */
