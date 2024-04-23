@@ -1,5 +1,8 @@
 {
     "name": "vendor/meta",
     "description": "a language learning site",
-    "license": "MIT"
+    "license": "MIT",
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
 }
