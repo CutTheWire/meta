@@ -42,7 +42,6 @@
  ┣ 📜composer.lock
  ┣ 📜config.php
  ┗ 📜index.html
-
 ```
 
 # File : .env add
