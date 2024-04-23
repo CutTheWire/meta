@@ -9,6 +9,3 @@ node_modules/
 
 # 임시 파일 무시
 *.tmp
-
-# 폴더 제외
-vendor/
