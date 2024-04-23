@@ -42,5 +42,14 @@
  ┣ 📜composer.lock
  ┣ 📜config.php
  ┗ 📜index.html
-
 ```
+
+
+# .env add
+```.env 
+DB_HOST= your_host
+DB_USER= your_root
+DB_PASSWORD= your_pw
+DB_NAME= your_DB
+```
+
