@@ -10,9 +10,5 @@ node_modules/
 # 임시 파일 무시
 *.tmp
 
-# 파일 제외
-composer.lock
-composer.json
-
 # 폴더 제외
 vendor/
