@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var MainTophpButton = document.getElementById('goToPhp');
     if (MainTophpButton) {
         MainTophpButton.onclick = function() {
-            window.location.href = '../meta/php/index.php';
+            window.location.href = './php/index.php';
         };
     } else {
         console.error('goToPhp 요소를 찾을 수 없습니다.');

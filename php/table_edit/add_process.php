@@ -53,38 +53,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
     
 }
-
-
 // 입력 폼 생성
 ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>데이터 추가: <?= htmlspecialchars($tableName) ?></title>
-    <link rel="stylesheet" href="../../CSS/add_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>데이터 추가 <?= htmlspecialchars($tableName) ?></title>
+    <link rel="stylesheet" href="../../CSS/add_style.css?v=1.1">
+    <style>
+        body { padding-top: 20px; }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>데이터 추가: <?= htmlspecialchars($tableName) ?></h1>
+        <h1 class="mb-4">데이터 추가 <span class="table-name"><?= htmlspecialchars($tableName) ?></span></h1>
         <form action="add_process.php?table=<?= htmlspecialchars($tableName) ?>" method="post">
-            <section>
-                <?php foreach ($columns as $column): ?>
-                    <div class="form-group">
-                        <label for="<?= $column ?>"><?= htmlspecialchars($column) ?>:</label>
-                        <?php
-                        // 시간 관련 컬럼인 경우 현재 시간을 기본값으로 설정
-                        if (stripos($columnTypes[$column], 'date') !== false || stripos($columnTypes[$column], 'time') !== false) {
-                            echo '<input type="text" id="' . $column . '" name="' . $column . '" value="' . date('Y-m-d H:i:s') . '">';
-                        } else {
-                            echo '<input type="text" id="' . $column . '" name="' . $column . '">';
-                        }
-                        ?>
-                    </div>
-                <?php endforeach; ?>
-            </section>
-            <button type="submit">추가</button>
+            <?php foreach ($columns as $column): ?>
+                <div class="form-group">
+                    <label for="<?= $column ?>"><?= htmlspecialchars($column) ?>:</label>
+                    <input type="text" class="form-control" id="<?= $column ?>" name="<?= $column ?>"
+                        value="<?= (stripos($columnTypes[$column], 'date') !== false || stripos($columnTypes[$column], 'time') !== false) ? date('Y-m-d H:i:s') : '' ?>">
+                </div>
+            <?php endforeach; ?>
+            <button type="submit" class="btn btn-primary">추가</button>
         </form>
     </div>
+
+    <!-- 부트스트랩 JS 추가 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

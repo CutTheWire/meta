@@ -18,6 +18,7 @@ function createMemberTable($rows) {
     echo "<th>비밀번호</th>";
     echo "<th>가입일</th>";
     echo "<th>위치</th>";
+    echo "<th>권한</th>";
     echo "<th></th>";
     echo "</tr>";
     echo "</thead>";
@@ -32,6 +33,7 @@ function createMemberTable($rows) {
         echo "<td>" . htmlspecialchars($row['pwd']) . "</td>";
         echo "<td>" . date('Y-m-d', strtotime($row['date'])) . "</td>";
         echo "<td>" . htmlspecialchars($row['location']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['role']) . "</td>";
         echo "<td><button type='button' onclick='location.href=\"" . htmlspecialchars($editProcessPath) . "?table=" . htmlspecialchars($name) . "&id=" . htmlspecialchars($row['id']) . "\"'>수정</button></td>";
         echo "</tr>";
     }

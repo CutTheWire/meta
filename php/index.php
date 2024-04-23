@@ -1,3 +1,12 @@
+<?php
+session_start(); // 세션 시작
+
+// 로그인 상태가 아니면 로그인 페이지로 리다이렉트
+if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
+    header('Location: ../index.html'); // 로그인 페이지로 리다이렉트
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -14,10 +23,11 @@
     </style>
 </head>
 <body>
-    <button id="phpToMain">메인페이지</button>
+    <button style="float: right;" onclick="window.location.href='sign_out.php';">Sign out</button>
+    <br><br>
     <div class="container">
         <?php $data = include('data_process.php'); ?>
-        <h1>테이블<?php if (!empty($data['table'])) { echo "<span class='table-name'>" . htmlspecialchars($data['table']) . "</span>"; } ?></h1>
+        <h1>테이블 관리<?php if (!empty($data['table'])) { echo "<span class='table-name'>" . htmlspecialchars($data['table']) . "</span>"; } ?></h1>
         <form action="" method="get">
             <input type="submit" name="table" value="word">
             <input type="submit" name="table" value="speak">

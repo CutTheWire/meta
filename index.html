@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="ko">
-    
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-    <title>메인 페이지</title>
-    <link rel="stylesheet" href="./CSS/style.css">
-    <script src="./JS/script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="./CSS/sign_in.css">
 </head>
 <body>
-    <div class="container">
-        <h1>메인 페이지</h1>
-        <button id="goToPhp">관리자로 접속</button> <!-- 새로운 버튼 추가 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            if (document.cookie.split(';').some((item) => item.trim().startsWith('loggedIn='))) {
+                window.location.href = './php/index.php';
+            }
+        });
+    </script>
+    <div class="login-container">
+        <form action="./php/sign_in.php" method="POST">
+            <label for="id">ID:</label>
+            <input type="id" id="id" name="id" required>
+            
+            <label for="pwd">PW:</label>
+            <input type="password" id="pwd" name="pwd" required>
+            
+            <button type="submit">로그인</button>
+        </form>
     </div>
 </body>
 </html>

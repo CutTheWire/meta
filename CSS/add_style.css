@@ -1,7 +1,9 @@
-/* 기본 스타일 */
+
+
 .container {
-    width: 80%;
+    width: 50%;
     margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
 }
 
 .form-group {
@@ -10,23 +12,41 @@
 
 .form-group label,
 .form-group input {
+    margin: 0 1%;
     display: block;
+    margin-bottom: 5px; /* 레이블과 인풋 간격 조정 */
+    font-weight: bold; /* 폰트 굵기 변경 */
 }
 
-input[type="text"] {
-    width: 100%;
+/* tableName 스타일 지정, htmlspecialchars 함수를 통해 출력되는 변수에 대한 직접적인 CSS 적용은 불가능하므로
+   해당 클래스를 가진 요소에 스타일을 적용합니다. */
+.table-name {
+    color: #007bff; /* 색상 변경 */
+    font-weight: bold; /* 폰트 굵기 변경 */
+}
+
+input[type="text"], 
+button[type="submit"] {
+    width: 98%; /* 너비를 100%에서 98%로 조정하여 좌우 마진 고려 */
     padding: 10px;
+    margin: 0 1%; /* 좌우 마진 추가로 중앙 정렬 효과 */
+    border: 1px solid #ccc; /* 테두리 스타일 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    transition: all 0.3s ease-in-out; /* 트랜지션 추가 */
+    box-sizing: border-box; /* 패딩과 마진을 너비에 포함 */
 }
 
 button[type="submit"] {
-    padding: 10px 20px;
+    width: 98%; /* 버튼 너비를 input과 동일하게 조정 */
+    background-color: #007bff; /* 배경색 */
+    color: white; /* 글자색 */
     cursor: pointer;
 }
 
 /* 화면 너비가 600px 미만일 때 적용될 스타일 */
 @media (max-width: 600px) {
     .container {
-        width: 95%;
+        width: 100%;
     }
 
     .form-group label,
@@ -36,7 +56,7 @@ button[type="submit"] {
     }
 
     input[type="text"] {
-        width: calc(100% - 20px);
+        width: calc(100% - 20px); /* 패딩 고려하여 너비 조정 */
     }
 
     button[type="submit"] {
@@ -55,5 +75,3 @@ button[type="submit"] {
         width: 100%;
     }
 }
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZF9zdHlsZV8xLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiJhZGRfc3R5bGUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyog6riw67O4IOyKpO2DgOydvCAqL1xuLmNvbnRhaW5lciB7XG4gICAgd2lkdGg6IDgwJTtcbiAgICBtYXJnaW46IDAgYXV0bztcbn1cblxuLmZvcm0tZ3JvdXAge1xuICAgIG1hcmdpbi1ib3R0b206IDE1cHg7XG59XG5cbi5mb3JtLWdyb3VwIGxhYmVsLFxuLmZvcm0tZ3JvdXAgaW5wdXQge1xuICAgIGRpc3BsYXk6IGJsb2NrO1xufVxuXG5pbnB1dFt0eXBlPVwidGV4dFwiXSB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgcGFkZGluZzogMTBweDtcbn1cblxuYnV0dG9uW3R5cGU9XCJzdWJtaXRcIl0ge1xuICAgIHBhZGRpbmc6IDEwcHggMjBweDtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi8qIO2ZlOuptCDrhIjruYTqsIAgNjAwcHgg66+466eM7J28IOuVjCDsoIHsmqnrkKAg7Iqk7YOA7J28ICovXG5AbWVkaWEgKG1heC13aWR0aDogNjAwcHgpIHtcbiAgICAuY29udGFpbmVyIHtcbiAgICAgICAgd2lkdGg6IDk1JTtcbiAgICB9XG5cbiAgICAuZm9ybS1ncm91cCBsYWJlbCxcbiAgICAuZm9ybS1ncm91cCBpbnB1dCB7XG4gICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgfVxuXG4gICAgaW5wdXRbdHlwZT1cInRleHRcIl0ge1xuICAgICAgICB3aWR0aDogY2FsYygxMDAlIC0gMjBweCk7XG4gICAgfVxuXG4gICAgYnV0dG9uW3R5cGU9XCJzdWJtaXRcIl0ge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG59XG5cbi8qIO2ZlOuptCDrhIjruYTqsIAgNDAwcHgg66+466eM7J28IOuVjCDsoIHsmqnrkKAg7Iqk7YOA7J28ICovXG5AbWVkaWEgKG1heC13aWR0aDogNDAwcHgpIHtcbiAgICAuZm9ybS1ncm91cCBsYWJlbCxcbiAgICAuZm9ybS1ncm91cCBpbnB1dCB7XG4gICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIH1cblxuICAgIGlucHV0W3R5cGU9XCJ0ZXh0XCJdIHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgfVxufVxuIl19 */

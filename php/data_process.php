@@ -1,8 +1,10 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$password = '';
-$database = 'metaclass';
+include('C:/xampp/htdocs/meta/config.php'); // 환경 변수 로드
+
+$host = $_ENV['DB_HOST'];
+$user = $_ENV['DB_USER'];
+$password = $_ENV['DB_PASSWORD'];
+$database = $_ENV['DB_NAME'];
 
 $conn = mysqli_connect($host, $user, $password, $database);
 if (!$conn) {
